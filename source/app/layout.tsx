@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import UserTracking from '@/components/UserTracking'
 import './globals.css'
 
 export const metadata: Metadata = {
@@ -27,10 +28,11 @@ export default function RootLayout({
     <html lang="en" data-theme="dark">
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-359297299" />
-        <script dangerouslySetInnerHTML={{ __html: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-359297299');` }} />
       </head>
-      <body>{children}</body>
+      <body>
+        <UserTracking />
+        {children}
+      </body>
     </html>
   )
 }
