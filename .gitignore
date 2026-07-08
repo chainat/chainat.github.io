@@ -1,10 +1,14 @@
 .idea
-_next/static/webpack
-_next/static/development
-# /302672c9932a01c9c528.hot-update.json
-
-source/samples
-out/
-
 .DS_Store
 node_modules/
+
+# Next.js
+.next/
+out/
+*.tsbuildinfo
+next-env.d.ts
+
+# Vercel
+.vercel
+
+test-agents
